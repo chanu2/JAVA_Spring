@@ -24,9 +24,9 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public Optional<Member> findByName(String name) {
-        return store.values().stream()
+        return store.values().stream() // values 값을 하나 씩 모두 반환한다
                 .filter(member -> member.getName().equals(name))
-                .findAny();
+                .findAny();  // 발견한 순서의 첫번째 것을 반환한다.
 
     }
 
