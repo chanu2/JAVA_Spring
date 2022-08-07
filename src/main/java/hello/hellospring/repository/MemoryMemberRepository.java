@@ -4,7 +4,7 @@ import hello.hellospring.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
-
+//@Repository  등록해줘야 컨테이너에 올라간다
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long,Member> store = new HashMap<>();

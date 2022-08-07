@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <div class="container">
-    <form action="/members/new" method="post">
+    <form action="/members/new" method="post">      <!-- /members/new 에 post방식으로 넘어온다 그러면 spring에 postmapping으로 이동됨 -->
         <div class="form-group">
             <label for="name">이름</label>
             <input type="text" id="name" name="name" placeholder="이름을
-입력하세요">
+입력하세요">  <!-- 이름을 name변수로 입력받는다 -->
         </div>
         <button type="submit">등록</button>
     </form>

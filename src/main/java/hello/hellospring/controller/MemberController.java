@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-@Controller
+@Controller  // 스프링이 컨테이너에 등록한다.
 public class MemberController {
-    private final MemberService memberService;
+    private final MemberService memberService;  // new로 생성해서 사용할 수도 있지만 memberService를  ordercontroller등 다른 컨트롤러도 가져다 사용해야 하기 때문에
 
-    @Autowired   // 멤버 서비스를 스트링이 스프링 컨테이너에 있는 멤버서비스를 가져다가 연결해준다
+    @Autowired   // 멤버 서비스를 스트링이 스프링 컨테이너에 있는 멤버서비스를 가져다가 연결해준다  그렇지만 memberService는 단지 spring이 접근하지 못한 순수한 자바 코드이기 때문에 스프링 컨테이너에 등록헤 줘야한다 memberService로 이동
     public MemberController(MemberService memberService){
         this.memberService=memberService;
     }
